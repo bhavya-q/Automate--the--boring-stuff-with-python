@@ -7,7 +7,7 @@ def commaCode(listname):
  if listLen == 0:     # case 1: empty list
    return ''
  elif listLen == 1:     # case 2: list with single item
-   return listname[0]
+   return str(listname[0])
  else:
    for i in range(len(listname)):   # to convert list_item into string
      if i != len(listname) - 1:
