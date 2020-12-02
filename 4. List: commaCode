@@ -1,0 +1,21 @@
+def commaCode(listname):
+
+# Takes a list and returns a string of items seperated by 'commas' and it last by 'and'
+
+ output = ''   
+ listLen = len(listname)
+ if listLen == 0:     # case 1: empty list
+   return ''
+ elif listLen == 1:     # case 2: list with single item
+   return listname[0]
+ else:
+   for i in range(len(listname)):   # to convert list_item into string
+     if i != len(listname) - 1:
+       output += str(listname[i]) + ', '
+     else:
+      output += 'and ' + str(listname[-1])
+ return output   
+
+spam = ['apples','bananas','tofu','cats']
+code = commaCode(spam)
+print(code)
